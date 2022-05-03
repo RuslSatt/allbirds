@@ -29,18 +29,22 @@
    }
 }
 .block-top__tabs {
-   margin: 0 0 10px 0;
+   margin: 0 0 -2px 0;
 }
 .block-top__link {
+   display: inline;
    letter-spacing: 2px;
    color: #212A2F;
    font-size: 16px;
    line-height: 24px;
    text-transform: uppercase;
    padding: 0 0 12.5px 0;
-   transition: 0.2s;
+   position: relative;
+   &.active-tab {
+      border-bottom: 3px solid #000000;
+   }
    &:hover{
-      border-bottom: 3px solid #000;
+      color: #000000;
    }
 }
 
@@ -62,6 +66,12 @@
    padding: 0 10px;
    @media (max-width:768px) {
       flex: 0 1 100%;
+   }
+   &.active-column {
+      display: flex;
+   }
+   &.not-active-column {
+      display: none;
    }
 }
 .main-tabs__screen {
