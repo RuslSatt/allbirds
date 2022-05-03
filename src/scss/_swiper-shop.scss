@@ -1,78 +1,176 @@
 .swiper-shop {
-   margin: 0px 0px 120px 0px;
-   @media (max-width: 768px) {
-      margin: 0px 0px 40px 0px;
-   }
+  margin: 0px 0px 120px 0px;
+  @media (max-width: 768px) {
+    margin: 0px 0px 40px 0px;
+  }
 }
+
 .swiper-shop__title {
-   color: #212A2F;
-   font-size: 32px;
-   line-height: 42px;
-   font-weight: bold;
-   margin: 0px 0px 24px 0px;
-   letter-spacing: 0.5px;
-   padding: 0px 10px 0px 10px;
-   @include adaptive-fonts (32, 26);
-   @media (max-width: 768px) {
-      text-align: center;
-      line-height: 30px;
-   }
+  color: #212A2F;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: bold;
+  margin: 0px 0px 24px 100px;
+  letter-spacing: 0.5px;
+  padding: 0px 10px 0px 10px;
+  @include adaptive-fonts(32, 26);
+  @media (max-width: 1460px) {
+    text-align: center;
+    line-height: 30px;
+    margin: 0 0 24px 0;
+  }
+}
+
+.swiper-shop__wrapper {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.swipe-left {
+  position: relative;
+  left: 20px;
+  z-index: 10;
+  cursor: pointer;
+  margin-left: -40px;
+  @media (max-width: 555px) {
+    margin-left: -100px;
+  }
+  @media (max-width: 475px) {
+    left: 65px;
+    bottom: 30px;
+    width: 80px;
+  }
+}
+
+.swipe-right {
+  position: relative;
+  z-index: 10;
+  right: 20px;
+  cursor: pointer;
+  margin-right: -40px;
+  @media (max-width: 555px) {
+
+    margin-right: -100px;
+  }
+  @media (max-width: 475px) {
+    right: 65px;
+    bottom: 30px;
+    width: 80px;
+  }
+}
+.swiper-shop__swiper-wrapper {
+  overflow: hidden;
+  width: 1236px;
+  @media (max-width: 1400px) {
+    width: 1000px;
+  }
+  @media (max-width: 1150px) {
+    width: 700px;
+  }
+  @media (max-width: 850px) {
+    width: 600px;
+  }
+  @media (max-width: 768px) {
+    width: 400px;
+  }
+  @media (max-width: 555px) {
+    width: 310px;
+  }
+  @media (max-width: 340px) {
+    width: 280px;
+  }
+}
+.swiper-shop__row-wrapper {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: 1s ease;
 }
 .swiper-shop__row {
-   padding: 0px 10px 0px 10px;
-   display: flex;
-   gap: 20px;
-   @media (max-width: 768px) {
-      flex-direction: column;
-   }
+  display: flex;
+  flex: 0 0 1236px;
+  width: 100%;
+  gap: 24px;
+  @media (max-width: 1400px) {
+    flex: 0 0 1000px;
+  }
+  @media (max-width: 1150px) {
+    flex: 0 0 700px;
+  }
+  @media (max-width: 850px) {
+    flex: 0 0 600px;
+  }
+  @media (max-width: 768px) {
+    flex: 0 0 400px;
+  }
+  @media (max-width: 555px) {
+    flex: 0 0 310px;
+  }
+  @media (max-width: 340px) {
+    flex: 0 0 280px;
+  }
 }
+
 .swiper-shop__column {
-   display: flex;
-   flex: 0 1 33.333%;
+  display: flex;
+  flex: 0 1 33.333%;
+  @media (max-width: 1200px) {
+    flex: 0 1 49%;
+  }
+  @media (max-width: 768px) {
+    flex: 0 1 100%;
+  }
+  //@media (max-width: 1100px) {
+  //  flex: 1 0 48%;
+  //}
 }
-.swiper-shop__card{
-   display: flex;
-   flex-direction: column;
-   flex: 1 1 auto;
+
+.swiper-shop__card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
+
 .swiper-shop__image {
-   position: relative;
-   padding: 0 0 97.5% 0;
-   transition: 0.5s;
-   margin: 0px 0px 16px 0px;
-   &:hover {
-      transform: scale(1.05, 1.05);
-      }
-   img{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-   }
+  position: relative;
+  padding: 0 0 100% 0;
+  transition: 0.5s;
+  margin: 0px 0px 16px 0px;
+  &:hover {
+    transform: scale(1.05, 1.05);
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .swiper-shop__subtitle {
-   letter-spacing: 0.5px;
-   font-size: 22px;
-   line-height: 29px;
-   font-weight: bold;
-   color: #212A2F;
-   margin: 0px 0px 10px 0px;
-   @include adaptive-fonts (22, 18);
-   @media (max-width: 768px) {
-      margin: 0px 0px 10px 0px;
-      line-height: 22px;
-   }
+  letter-spacing: 0.5px;
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: bold;
+  color: #212A2F;
+  margin: 0px 0px 10px 0px;
+  @include adaptive-fonts(22, 18);
+  @media (max-width: 768px) {
+    margin: 0px 0px 10px 0px;
+    line-height: 22px;
+  }
 }
+
 .swiper-shop__text {
-   letter-spacing: 0.5px;
-   font-size: 16px;
-   line-height: 24px;
-   color: #212A2F;
-   @include adaptive-fonts (16, 14);
-   @media (max-width: 768px) {
-      line-height: 20px;
-   }
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212A2F;
+  @include adaptive-fonts(16, 14);
+  @media (max-width: 768px) {
+    line-height: 20px;
+  }
 }
