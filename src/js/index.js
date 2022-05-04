@@ -198,7 +198,7 @@ if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-
 }
 
 const moveRight = () => {
-    if (window.matchMedia("(min-width: 1200px)").matches) {
+    if (window.matchMedia("(min-width: 1201px)").matches) {
         if (click < 1) click += 1
         swiperRow.style.left = -100 + '%';
         swipeRight.src = './assets/images/swipe-right-disable.svg'
@@ -228,7 +228,7 @@ const moveRight = () => {
     }
 }
 const moveLeft = () => {
-    if (window.matchMedia("(min-width: 1200px)").matches) {
+    if (window.matchMedia("(min-width: 1201px)").matches) {
         if (click === 1) {
             swiperRow.style.left = 0;
         }
@@ -374,7 +374,7 @@ if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-
 }
 
 const moveRightSecond = () => {
-    if (window.matchMedia("(min-width: 1200px)").matches) {
+    if (window.matchMedia("(min-width: 1201px)").matches) {
         if (clickSecond < 1) clickSecond += 1
         swiperRowSecond.style.left = -100 + '%';
         swipeRightSecond.src = './assets/images/swipe-right-disable.svg'
@@ -404,7 +404,7 @@ const moveRightSecond = () => {
     }
 }
 const moveLeftSecond = () => {
-    if (window.matchMedia("(min-width: 1200px)").matches) {
+    if (window.matchMedia("(min-width: 1201px)").matches) {
         if (clickSecond === 1) {
             swiperRowSecond.style.left = 0;
         }
@@ -553,7 +553,7 @@ if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-
 }
 
 const moveRightThird = () => {
-    if (window.matchMedia("(min-width: 1200px)").matches) {
+    if (window.matchMedia("(min-width: 1201px)").matches) {
         if (clickThird < 1) clickThird += 1
         swiperRowThird.style.left = -100 + '%';
         swipeRightThird.src = './assets/images/swipe-right-disable.svg'
@@ -583,7 +583,7 @@ const moveRightThird = () => {
     }
 }
 const moveLeftThird = () => {
-    if (window.matchMedia("(min-width: 1200px)").matches) {
+    if (window.matchMedia("(min-width: 1201px)").matches) {
         if (clickThird === 1) {
             swiperRowThird.style.left = 0;
         }
