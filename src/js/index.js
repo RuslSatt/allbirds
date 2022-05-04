@@ -99,7 +99,7 @@ let click = 0;
 let swipe = 0;
 
 
-if (window.innerWidth < 1150 && window.innerWidth > 767) {
+if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
 
     swipeShopRow.forEach(elem => {
         elem.remove()
@@ -155,7 +155,7 @@ if (window.innerWidth < 1150 && window.innerWidth > 767) {
         }
 
     })
-} else if (window.innerWidth < 768) {
+} else if (window.matchMedia("(max-width: 768px)").matches) {
     swipeShopRow.forEach(elem => {
         elem.remove()
     })
@@ -198,14 +198,14 @@ if (window.innerWidth < 1150 && window.innerWidth > 767) {
 }
 
 const moveRight = () => {
-    if (window.innerWidth > 1199) {
+    if (window.matchMedia("(min-width: 1200px)").matches) {
         if (click < 1) click += 1
         swiperRow.style.left = -100 + '%';
         swipeRight.src = './assets/images/swipe-right-disable.svg'
         swipeLeft.src = './assets/images/swipe-left.svg'
     }
 
-    if (window.innerWidth < 1200 && window.innerWidth > 767) {
+    if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
         if (click < 2) {
             click += 1
             swipe += 100
@@ -215,7 +215,7 @@ const moveRight = () => {
             swipeRight.src = './assets/images/swipe-right-disable.svg'
         }
         swiperRow.style.left = '-' + swipe + '%';
-    } else if (window.innerWidth < 768) {
+    } else if (window.matchMedia("(max-width: 768px)").matches) {
         if (click < 5) {
             click += 1
             swipe += 100
@@ -228,7 +228,7 @@ const moveRight = () => {
     }
 }
 const moveLeft = () => {
-    if (window.innerWidth > 1199) {
+    if (window.matchMedia("(min-width: 1200px)").matches) {
         if (click === 1) {
             swiperRow.style.left = 0;
         }
@@ -236,7 +236,7 @@ const moveLeft = () => {
         swipeRight.src = './assets/images/swipe-right.svg'
         swipeLeft.src = './assets/images/swipe-left-disable.svg'
     }
-    if (window.innerWidth < 1200 && window.innerWidth > 767) {
+    if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
         if (click < 3) {
             click -= 1
             swipe -= 100
@@ -246,7 +246,7 @@ const moveLeft = () => {
             swipeLeft.src = './assets/images/swipe-left-disable.svg'
         }
         swiperRow.style.left = '-' + swipe + '%';
-    } else if (window.innerWidth < 768) {
+    } else if (window.matchMedia("(max-width: 768px)").matches) {
         if (click < 6) {
             click -= 1
             swipe -= 100
@@ -273,7 +273,7 @@ const swiperRowSecond = document.querySelector('.swiper-shop__row-wrapper-second
 let clickSecond = 0;
 let swipeSecond = 0;
 
-if (window.innerWidth < 1150 && window.innerWidth > 767) {
+if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
 
     swipeShopRowSecond.forEach(elem => {
         elem.remove()
@@ -330,7 +330,7 @@ if (window.innerWidth < 1150 && window.innerWidth > 767) {
         }
 
     })
-} else if (window.innerWidth < 768) {
+} else if (window.matchMedia("(max-width: 768px)").matches) {
     swipeShopRowSecond.forEach(elem => {
         elem.remove()
     })
@@ -374,14 +374,14 @@ if (window.innerWidth < 1150 && window.innerWidth > 767) {
 }
 
 const moveRightSecond = () => {
-    if (window.innerWidth > 1199) {
+    if (window.matchMedia("(min-width: 1200px)").matches) {
         if (clickSecond < 1) clickSecond += 1
         swiperRowSecond.style.left = -100 + '%';
         swipeRightSecond.src = './assets/images/swipe-right-disable.svg'
         swipeLeftSecond.src = './assets/images/swipe-left.svg'
     }
 
-    if (window.innerWidth < 1200 && window.innerWidth > 767) {
+    if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
         if (clickSecond < 2) {
             clickSecond += 1
             swipeSecond += 100
@@ -391,7 +391,7 @@ const moveRightSecond = () => {
             swipeRightSecond.src = './assets/images/swipe-right-disable.svg'
         }
         swiperRowSecond.style.left = '-' + swipeSecond + '%';
-    } else if (window.innerWidth < 768) {
+    } else if (window.matchMedia("(max-width: 768px)").matches) {
         if (clickSecond < 5) {
             clickSecond += 1
             swipeSecond += 100
@@ -404,7 +404,7 @@ const moveRightSecond = () => {
     }
 }
 const moveLeftSecond = () => {
-    if (window.innerWidth > 1199) {
+    if (window.matchMedia("(min-width: 1200px)").matches) {
         if (clickSecond === 1) {
             swiperRowSecond.style.left = 0;
         }
@@ -412,7 +412,7 @@ const moveLeftSecond = () => {
         swipeRightSecond.src = './assets/images/swipe-right.svg'
         swipeLeftSecond.src = './assets/images/swipe-left-disable.svg'
     }
-    if (window.innerWidth < 1200 && window.innerWidth > 767) {
+    if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
         if (clickSecond < 3) {
             clickSecond -= 1
             swipeSecond -= 100
@@ -422,7 +422,7 @@ const moveLeftSecond = () => {
             swipeLeftSecond.src = './assets/images/swipe-left-disable.svg'
         }
         swiperRowSecond.style.left = '-' + swipeSecond + '%';
-    } else if (window.innerWidth < 768) {
+    } else if (window.matchMedia("(max-width: 768px)").matches) {
         if (clickSecond < 6) {
             clickSecond -= 1
             swipeSecond -= 100
@@ -452,7 +452,7 @@ const swiperRowThird = document.querySelector('.swiper-shop__row-wrapper-third')
 let clickThird = 0;
 let swipeThird = 0;
 
-if (window.innerWidth < 1150 && window.innerWidth > 767) {
+if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
 
     swipeShopRowThird.forEach(elem => {
         elem.remove()
@@ -509,7 +509,7 @@ if (window.innerWidth < 1150 && window.innerWidth > 767) {
         }
 
     })
-} else if (window.innerWidth < 768) {
+} else if (window.matchMedia("(max-width: 768px)").matches) {
     swipeShopRowThird.forEach(elem => {
         elem.remove()
     })
@@ -553,14 +553,14 @@ if (window.innerWidth < 1150 && window.innerWidth > 767) {
 }
 
 const moveRightThird = () => {
-    if (window.innerWidth > 1199) {
+    if (window.matchMedia("(min-width: 1200px)").matches) {
         if (clickThird < 1) clickThird += 1
         swiperRowThird.style.left = -100 + '%';
         swipeRightThird.src = './assets/images/swipe-right-disable.svg'
         swipeLeftThird.src = './assets/images/swipe-left.svg'
     }
 
-    if (window.innerWidth < 1200 && window.innerWidth > 767) {
+    if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
         if (clickThird < 2) {
             clickThird += 1
             swipeThird += 100
@@ -570,7 +570,7 @@ const moveRightThird = () => {
             swipeRightThird.src = './assets/images/swipe-right-disable.svg'
         }
         swiperRowThird.style.left = '-' + swipeThird + '%';
-    } else if (window.innerWidth < 768) {
+    } else if (window.matchMedia("(max-width: 768px)").matches) {
         if (clickThird < 5) {
             clickThird += 1
             swipeThird += 100
@@ -583,7 +583,7 @@ const moveRightThird = () => {
     }
 }
 const moveLeftThird = () => {
-    if (window.innerWidth > 1199) {
+    if (window.matchMedia("(min-width: 1200px)").matches) {
         if (clickThird === 1) {
             swiperRowThird.style.left = 0;
         }
@@ -591,7 +591,7 @@ const moveLeftThird = () => {
         swipeRightThird.src = './assets/images/swipe-right.svg'
         swipeLeftThird.src = './assets/images/swipe-left-disable.svg'
     }
-    if (window.innerWidth < 1200 && window.innerWidth > 767) {
+    if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
         if (clickThird < 3) {
             clickThird -= 1
             swipeThird -= 100
@@ -601,7 +601,7 @@ const moveLeftThird = () => {
             swipeLeftThird.src = './assets/images/swipe-left-disable.svg'
         }
         swiperRowThird.style.left = '-' + swipeThird + '%';
-    } else if (window.innerWidth < 768) {
+    } else if (window.matchMedia("(max-width: 768px)").matches) {
         if (clickThird < 6) {
             clickThird -= 1
             swipeThird -= 100
