@@ -31,6 +31,9 @@
 }
 .block-top__tabs {
    margin: 0 0 -2px 0;
+   button {
+      background: transparent;
+   }
 }
 .block-top__link {
    display: inline;
