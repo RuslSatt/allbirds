@@ -237,7 +237,7 @@ const moveLeft = () => {
         swipeLeft.src = './assets/images/swipe-left-disable.svg'
     }
     if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
-        if (click < 3) {
+        if (click < 3 && click > 0) {
             click -= 1
             swipe -= 100
             swipeRight.src = './assets/images/swipe-right.svg'
@@ -247,7 +247,7 @@ const moveLeft = () => {
         }
         swiperRow.style.left = '-' + swipe + '%';
     } else if (window.matchMedia("(max-width: 768px)").matches) {
-        if (click < 6) {
+        if (click < 6 && click > 0) {
             click -= 1
             swipe -= 100
             swipeRight.src = './assets/images/swipe-right.svg'
@@ -413,7 +413,7 @@ const moveLeftSecond = () => {
         swipeLeftSecond.src = './assets/images/swipe-left-disable.svg'
     }
     if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
-        if (clickSecond < 3) {
+        if (clickSecond < 3 && clickSecond > 0) {
             clickSecond -= 1
             swipeSecond -= 100
             swipeRightSecond.src = './assets/images/swipe-right.svg'
@@ -423,7 +423,7 @@ const moveLeftSecond = () => {
         }
         swiperRowSecond.style.left = '-' + swipeSecond + '%';
     } else if (window.matchMedia("(max-width: 768px)").matches) {
-        if (clickSecond < 6) {
+        if (clickSecond < 6 && clickSecond > 0) {
             clickSecond -= 1
             swipeSecond -= 100
             swipeRightSecond.src = './assets/images/swipe-right.svg'
@@ -573,6 +573,7 @@ const moveRightThird = () => {
     } else if (window.matchMedia("(max-width: 768px)").matches) {
         if (clickThird < 5) {
             clickThird += 1
+            console.log (clickThird);
             swipeThird += 100
             swipeLeftThird.src = './assets/images/swipe-left.svg'
         }
@@ -592,7 +593,7 @@ const moveLeftThird = () => {
         swipeLeftThird.src = './assets/images/swipe-left-disable.svg'
     }
     if (window.matchMedia("(max-width: 1200px)").matches && window.matchMedia("(min-width: 769px)").matches) {
-        if (clickThird < 3) {
+        if (clickThird < 3 && clickThird > 0) {
             clickThird -= 1
             swipeThird -= 100
             swipeRightThird.src = './assets/images/swipe-right.svg'
@@ -602,7 +603,7 @@ const moveLeftThird = () => {
         }
         swiperRowThird.style.left = '-' + swipeThird + '%';
     } else if (window.matchMedia("(max-width: 768px)").matches) {
-        if (clickThird < 6) {
+        if (clickThird < 6 && clickThird > 0) {
             clickThird -= 1
             swipeThird -= 100
             swipeRightThird.src = './assets/images/swipe-right.svg'
